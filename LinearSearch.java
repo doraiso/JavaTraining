@@ -10,7 +10,7 @@ public class LinearSearch {
 
 	/**
 	 * テーブルのエントリ
-	 * @author Ryo
+	 * @author doraiso
 	 *
 	 */
 	class Entry {
