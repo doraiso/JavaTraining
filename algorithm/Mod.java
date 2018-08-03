@@ -13,9 +13,11 @@ public class Mod {
 	 * @param j 割る数
 	 * @return
 	 */
+	/**
 	public long mod(long l,int j) {
 		return l % j;
 	}
+	*/
 
 	/**
 	 * 111....111(i)を7(j)で割った余りを配列から取得
