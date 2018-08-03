@@ -32,13 +32,15 @@ public class Mod {
 	public static void main(String[] args) {
 
 		Mod m = new Mod();
-		Long l = 1000000000000L; // 111....111(1兆桁)
+		// Long icchou = 1000000000000L; // 111....111(1兆桁)
 
-		Long test = 1000L; // テスト用
+		Long test = 1000000000000L; // テスト用
+
+		test = test % 7;
 
 		// testぐらいの値なら即座に出るがlぐらいだと詰む
-		System.out.println(m.mod(ichi(l),7));
-		System.out.println(m.longtoArr(ichi(l),7));
+		System.out.println(m.mod(ichi(test),7));
+		// System.out.println(m.longtoArr(ichi(test),7));
 
 	}
 
@@ -48,8 +50,9 @@ public class Mod {
 	 * @return 桁数に応じて111..11と出力
 	 */
 
-	public static int ichi(long keta) {
-		int out = 0;
+	public static long ichi(long keta) {
+		long out = 0;
+		keta = keta % 7;
 		for(int i = 0 ; i < keta ;i++) {
 			if (i % 7 == 0) {
 				out = 1;
@@ -57,6 +60,7 @@ public class Mod {
 				out = out * 10 + 1;
 			}
 		}
+		System.out.println("out= " + out);
 		return out;
 	}
 
