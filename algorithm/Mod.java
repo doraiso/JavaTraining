@@ -8,16 +8,14 @@ public class Mod {
 	int[] arr = {1,4,6,5,2,0,1};
 
 	/**
-	 * 剰余 arr計算プロセスで使った
+	 * 剰余
 	 * @param l 割られる数
 	 * @param j 割る数
 	 * @return
 	 */
-	/**
 	public long mod(long l,int j) {
 		return l % j;
 	}
-	*/
 
 	/**
 	 * 111....111(i)を7(j)で割った余りを配列から取得
@@ -26,40 +24,40 @@ public class Mod {
 	 * @return
 	 */
 	public long longtoArr(long l,int j) {
-		int m = (int) (l % j);
+		int valLen = String.valueOf(l).length()-1;
+		int m = valLen % j;
 		return arr[m];
 	}
 
 	public static void main(String[] args) {
 
 		Mod m = new Mod();
-		// for(int i=0;i<=100;i++) {
-			// System.out.println(m.mod(ichi(i),7));
-			// System.out.println(m.longtoArr(i, 7));
-		// }
-		System.out.println(m.longtoArr(1000000000000L, 7));
+		Long l = 1000000000000L; // 111....111(1兆桁)
+
+		Long test = 1000L; // テスト用
+
+		// testぐらいの値なら即座に出るがlぐらいだと詰む
+		System.out.println(m.mod(ichi(l),7));
+		System.out.println(m.longtoArr(ichi(l),7));
 
 	}
 
 	/**
-	 * 111出力メソッド arr計算プロセスで使った
+	 * 111出力メソッド
 	 * @param keta 桁数
 	 * @return 桁数に応じて111..11と出力
 	 */
 
-	/**
 	public static int ichi(long keta) {
-		String str = "1";
-		for(int i = 0 ; i <= keta ;i++) {
+		int out = 0;
+		for(int i = 0 ; i < keta ;i++) {
 			if (i % 7 == 0) {
-				str = "1";
+				out = 1;
 			} else {
-				str = str + "1";
+				out = out * 10 + 1;
 			}
 		}
-		System.out.println(str);
-		return Integer.parseInt(str);
+		return out;
 	}
-	*/
 
 }
