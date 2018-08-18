@@ -8,9 +8,10 @@ package algorithm;
  */
 public class Sosu {
 
+	/**
+	 * 2からこの数まで出力するよ
+	 */
 	private int num;
-
-
 
 	/**
 	 * コンストラクタだよ
