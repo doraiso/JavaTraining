@@ -45,14 +45,22 @@ public class Sosu {
 	 *            判別対象となる数
 	 * @return 素数ならtrue、違うならfalse
 	 */
+	//	public boolean isSosu(int num) {
+	//		boolean sosu = true;
+	//		for (int i = 2; i < num; i++) {
+	//			if (num % i == 0) {
+	//				sosu = false;
+	//			}
+	//		}
+	//		return sosu;
+	//	}
+
 	public boolean isSosu(int num) {
-		boolean sosu = true;
 		for (int i = 2; i < num; i++) {
-			if (num % i == 0) {
-				sosu = false;
-			}
+			if (num % i == 0)
+				return false;
 		}
-		return sosu;
+		return true;
 	}
 
 }
