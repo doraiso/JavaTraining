@@ -11,4 +11,11 @@ public class Calculator {
 		return (float)x / (float)y;
 	}
 
+	public static void main(String[] args) {
+		Calculator calc = new Calculator();
+		System.out.println(calc.multiply(3, 5));
+		System.out.println(calc.divide(5, 3));
+
+	}
+
 }
