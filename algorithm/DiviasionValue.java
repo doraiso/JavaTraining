@@ -2,7 +2,7 @@ package algorithm;
 
 /**
  * 標本に対しての平均値・標準偏差・偏差値を返す
- * @author ryosuke
+ * @author doraiso
  *
  */
 public class DiviasionValue {
