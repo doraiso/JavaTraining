@@ -37,12 +37,13 @@ public class DiviasionValue {
 	 * @return 標本の平均値を返す
 	 */
 	private float getMean(int[] scores) {
-		// 合計
+		// 合計 Σx
+		// scoresがx1,x2,..,xi,..,xn(scoresの数はn個)とした場合の合計
 		int sum = 0;
 		for (int i : scores) {
 			sum += i;
 		}
-		// 平均
+		// 平均 μ = Σx / n
 		float mean = sum / scores.length;
 		return mean;
 	}
@@ -53,26 +54,29 @@ public class DiviasionValue {
 	 * @return 標本の標準偏差を返す
 	 */
 	private float getSD(int[] scores) {
-		// 分散
+		// 分散 σ^2 = Σ(xi - μx) ^ 2
 		float variance = 0F;
 		for (int i : scores) {
 			variance += Math.pow(i - getMean(scores), 2);
 		}
 
-		// 標準偏差
+		// 標準偏差 σ = sqrt((σ^2) / n)
 		float standardDiviasion = (float) Math.sqrt(variance / scores.length);
 		return standardDiviasion;
 	}
 
 	/**
 	 * 偏差値を求める
-	 * @param mean 標本の平均値
-	 * @param sd 標本の標準偏差
-	 * @param score 値(得点)
+	 * @param mean 標本の平均値(μ)
+	 * @param sd 標本の標準偏差(σ)
+	 * @param x 値(得点)
 	 * @return 値(得点)に対しての偏差値を返す
 	 */
-	private float getStandardScore(float mean,float sd,float score) {
-		return  (STANDARD_SCALE * (score - mean) / sd) + STANDARD_MEAN;
+	private float getStandardScore(float mean,float sd,float x) {
+		// 標本の平均値μ、標準偏差σを正規化する
+		// 正規化では平均値を50,標準偏差を10とする
+		// T = 10(x - μ) / σ + 50
+		return  (STANDARD_SCALE * (x - mean) / sd) + STANDARD_MEAN;
 	}
 
 }
