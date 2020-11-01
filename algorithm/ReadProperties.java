@@ -1,5 +1,7 @@
 package algorithm;
 
+import util.PropertyUtil;
+
 public class ReadProperties {
 
 	public static void main(String[] args) {
