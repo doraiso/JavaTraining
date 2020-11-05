@@ -13,7 +13,7 @@ public class OkawaRyuho {
 	private static int END_KAKKO_NUM = 0;
 
 	// なんかここいろいろいじるといっぱい大川隆法呼べるけどよく分からん
-	private static int OKAWA_CALL_NUM = 6;
+	private static int OKAWA_CALL_NUM = 3;
 
 	public static void main(String[] args) {
 		// スゥ……大川隆法です
