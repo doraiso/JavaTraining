@@ -1,11 +1,10 @@
 package test;
 
-import static org.hamcrest.CoreMatchers.*;
-import static org.junit.Assert.*;
-
+import algorithm.Calculator;
 import org.junit.Test;
 
-import algorithm.Calculator;
+import static org.hamcrest.core.Is.is;
+import static org.junit.Assert.assertThat;
 
 public class CalculatorTest extends Calculator {
 

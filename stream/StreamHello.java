@@ -88,7 +88,8 @@ public class StreamHello {
 
 
 		System.out.println(ramda.applyAsInt(2,4));
-
 	}
+
+
 
 }
