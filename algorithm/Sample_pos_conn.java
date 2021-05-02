@@ -15,7 +15,7 @@ public class Sample_pos_conn {
 		ResultSet rset = null;
 
 		//接続文字列
-		String url = "jdbc:postgresql://localhost:5432/test";
+		String url = "jdbc:postgresql://localhost:5432/postgres";
 		String user = "postgres";
         String password = args[0];
 

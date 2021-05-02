@@ -8,9 +8,9 @@ public class PrintThreeAho {
 	public static void main(String[] args) {
 
 		// 表示する文言(ここではアホ)を定数として定義します
-		final String strAho = "アホ";
+		String strAho = "おっぱい";
 		// まずは3の倍数か3の倍数ということで定数を付けます、とりあえず3にしましょう
-		final int intBaisu = 3;
+		int intBaisu = 3;
 
 		// とりあえず1から100まででやってみましょうß
 		// ここで繰り返しをしますß
