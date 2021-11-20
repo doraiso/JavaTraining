@@ -1,10 +1,10 @@
 package test;
 
-import algorithm.Calculator;
+import static org.junit.jupiter.api.Assertions.*;
+
 import org.junit.Test;
 
-import static org.hamcrest.core.Is.is;
-import static org.junit.Assert.assertThat;
+import algorithm.Calculator;
 
 public class CalculatorTest extends Calculator {
 
@@ -13,7 +13,7 @@ public class CalculatorTest extends Calculator {
 		Calculator calc = new Calculator();
 		int expected = 12;
 		int actual = calc.multiply(3, 4);
-		assertThat(actual, is(expected));
+		assertEquals(actual, expected);
 	}
 
 	@Test
@@ -21,7 +21,7 @@ public class CalculatorTest extends Calculator {
 		Calculator calc = new Calculator();
 		float expected = 1.5f;
 		float actual = calc.divide(3, 2);
-		assertThat(actual, is(expected));
+		assertEquals(actual, expected);
 	}
 
 	@Test(expected = IllegalArgumentException.class)
