@@ -1,10 +1,6 @@
 # JavaAlgorithm
 Learn Algorithm as Java
 
-~アルゴリズムをJavaにて勉強中~
+~Java勉強中のやつ~
 
-ただのJavaプログラム置き場
-
-参考文献
-  Javaプログラマのためのアルゴリズムとデータ構造
-  
+ただのJavaプログラム置き場  
