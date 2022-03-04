@@ -1,2 +1,3 @@
 # JavaAlgorithm
 Learn Java
+Sample
