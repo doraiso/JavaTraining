@@ -1,4 +1,4 @@
-# JavaAlgorithm
+# JavaTest
 
 Learn Java
 
