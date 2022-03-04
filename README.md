@@ -1,2 +1,5 @@
-# JavaAlgorithm
+# JavaTest
+
 Learn Java
+
+Sample
