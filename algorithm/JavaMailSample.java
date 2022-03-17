@@ -1,23 +1,18 @@
 /**
  * JavaMailSample.java
- * under construction
+ * debuged, but not exec.
  */
 
 package algorithm;
 
-import java.sql.Time;
 import java.util.Properties;
 
 import javax.mail.Authenticator;
-import javax.mail.Message;
 import javax.net.ssl.SSLSession;
-import javax.print.attribute.standard.MediaSize.ISO;
-import javax.swing.TransferHandler.TransferSupport;
 
 public class JavaMailSample {
 
-	private static final String RECIPIENTTYPE = Message.RecipientType;
-	private static final String STRING = RECIPIENTTYPE.toString();
+	private static final String STRING = Algorithm.RECIPIENTTYPE.toString();
 	private static final String InternetAddress = null;
 
 	private final class AuthenticatorExtension extends javax.mail.Authenticator {
@@ -86,17 +81,11 @@ public class JavaMailSample {
 		  send(message);
 
 	    } catch (Exception e) {
-	      e.printStackTrace();
-	}
-
-	private void MimeMessageJava(int i) {
+			e.printStackTrace();
 	}
 
 	private void setRecipient(String string2, String internetaddress2) {
-	}
-
-	private void extracted2(MimeMessage message) {
-		message.setRecipient(STRING, new InternetAddress());
+		message.setRecipient(string2, new InternetAddress());
 	}
 
 	private void extracted(String content, final String charset, MimeMessage message) {
