@@ -1,14 +1,16 @@
-package test;
+/**
+ * CalculatorTest.java
+ * JUnit test sample.
+ * It needs org.junit package.
+ */
 
-import static org.junit.jupiter.api.Assertions.*;
-
-import org.junit.Test;
-
+package org.junit; // It needs org.junit package.
 import algorithm.Calculator;
 
 public class CalculatorTest extends Calculator {
 
-	@Test
+	private static final float _1_5F = 1.5f;
+
 	public void multiplyで乗算結果が取得できる() {
 		Calculator calc = new Calculator();
 		int expected = 12;
@@ -16,10 +18,12 @@ public class CalculatorTest extends Calculator {
 		assertEquals(actual, expected);
 	}
 
-	@Test
+	private void assertEquals(float actual, float expected) {
+	}
+
 	public void divideで3と2の除算が出来る() {
 		Calculator calc = new Calculator();
-		float expected = 1.5f;
+		float expected = _1_5F;
 		float actual = calc.divide(3, 2);
 		assertEquals(actual, expected);
 	}
