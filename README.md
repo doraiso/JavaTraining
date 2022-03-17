@@ -1,5 +1,3 @@
 # JavaTest
 
 Learn Java
-
-Sample
