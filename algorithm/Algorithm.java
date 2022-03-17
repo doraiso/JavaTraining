@@ -1,5 +1,7 @@
 package algorithm;
 
+import javax.mail.Message;
+
 public class Algorithm {
 
 	public static void main(String[] args) {
@@ -19,5 +21,7 @@ public class Algorithm {
 		}
 
 	}
+
+    static final String RECIPIENTTYPE = Message.RecipientType;
 
 }

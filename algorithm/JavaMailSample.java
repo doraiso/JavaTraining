@@ -1,16 +1,25 @@
+/**
+ * JavaMailSample.java
+ * debuged, but not exec.
+ */
+
 package algorithm;
 
-import java.io.UnsupportedEncodingException;
 import java.util.Properties;
 
-import javax.mail.Address;
-import javax.mail.Message;
-import javax.mail.Session;
-import javax.mail.Transport;
-import javax.mail.internet.InternetAddress;
-import javax.mail.internet.MimeMessage;
+import javax.mail.Authenticator;
+import javax.net.ssl.SSLSession;
 
 public class JavaMailSample {
+
+	private static final String STRING = Algorithm.RECIPIENTTYPE.toString();
+	private static final String InternetAddress = null;
+
+	private final class AuthenticatorExtension extends javax.mail.Authenticator {
+	}
+
+	public JavaMailSample() {
+	}
 
 	public static void main(String[] args) {
 		JavaMailSample mailSend = new JavaMailSample();
@@ -29,7 +38,6 @@ public class JavaMailSample {
 
 	    //final String charset = "ISO-2022-JP";
 	    final String charset = "UTF-8";
-
 	    final String encoding = "base64";
 
 	    // for gmail
@@ -53,35 +61,45 @@ public class JavaMailSample {
 
 	    props.put("mail.debug", "true");
 
-		Session session = Session.getInstance(props,
-		new javax.mail.Authenticator() {
-		@Override
-			protected javax.mail.PasswordAuthentication getPasswordAuthentication() {
-				return new javax.mail.PasswordAuthentication(username, password);
-			}
-	    });
+		SSLSession session = getInstance(props,
+		new AuthenticatorExtension());
 
 	    try {
-	      MimeMessage message = new MimeMessage(session);
+	      MimeMessage message = new MimeMessage();
 
 	      // Set From:
-	      message.setFrom(new InternetAddress(from, "Watanabe Shin"));
+	      message.setFrom(new InternetAddress());
 	      // Set ReplyTo:
-	      message.setReplyTo(new Address[]{new InternetAddress(from)});
-	      // Set To:
-	      message.setRecipient(Message.RecipientType.TO, new InternetAddress(to));
+	      message.setReplyTo(new Address[]{(nternetAddress())});
 
+		  setRecipient(STRING, InternetAddress);
 	      message.setSubject(subject, charset);
-	      message.setText(content, charset);
+	      extracted(content, charset, message);
 
 	      message.setHeader("Content-Transfer-Encoding", encoding);
 
-	      Transport.send(message);
+		  send(message);
 
-	    } catch (javax.mail.MessagingException e) {
-	      throw new RuntimeException(e);
-	    } catch (UnsupportedEncodingException e) {
-	      throw new RuntimeException(e);
-	    }
+	    } catch (Exception e) {
+			e.printStackTrace();
+	}
+
+	private void setRecipient(String string2, String internetaddress2) {
+		message.setRecipient(string2, new InternetAddress());
+	}
+
+	private void extracted(String content, final String charset, MimeMessage message) {
+		message.setText(content, charset);
+	}
+
+	private Address nternetAddress() {
+		return null;
+	}
+
+	private void send(MimeMessage message) {
+	}
+
+	private SSLSession getInstance(Properties props, Authenticator authenticator) {
+		return null;
 	}
 }
