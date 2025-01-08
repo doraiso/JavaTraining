@@ -82,6 +82,7 @@ public class JavaMailSample {
 
 	    } catch (Exception e) {
 			e.printStackTrace();
+	    }
 	}
 
 	private void setRecipient(String string2, String internetaddress2) {
